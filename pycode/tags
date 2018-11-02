@@ -1,0 +1,92 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+DATA	NEWSe_compare.py	/^DATA = {c:{fm:{th:{n:{w:{s: [] for s in scores} for w in windows} for n in neighs} $/;"	v
+Dataset	NEWSe_compare.py	/^from netCDF4 import Dataset$/;"	i
+FI	NEWSe_compare.py	/^from evac.stats.fi import FI$/;"	i
+H	NEWSe_compare.py	/^            H = HeatMap(matrix[:,:,nw],outdir=outdir,fname=fname)$/;"	v
+HeatMap	NEWSe_compare.py	/^from evac.plot.heatmap import HeatMap$/;"	i
+N	NEWSe_compare.py	/^import numpy as N$/;"	i
+brokencases	NEWSe_compare.py	/^brokencases = ['20180518',]$/;"	v
+casedir	NEWSe_compare.py	/^            casedir = os.path.join(ensdir,casestr)$/;"	v
+caseutc	NEWSe_compare.py	/^            caseutc = datetime.datetime.strptime(casestr,"%Y%m%d")$/;"	v
+check	NEWSe_compare.py	/^        check = "{:02d}00".format(it) in os.listdir(os.path.join(ensdir,i))$/;"	v
+cidx	NEWSe_compare.py	/^                        cidx = 0$/;"	v
+cidx	NEWSe_compare.py	/^                        cidx = 1$/;"	v
+compute	NEWSe_compare.py	/^compute = False$/;"	v
+data	NEWSe_compare.py	/^                    data = pickle.load(f)$/;"	v
+data0	NEWSe_compare.py	/^                        data0 = N.max(nc0.variables["REFL_10CM"][0,:,:,:],axis=0)$/;"	v
+data1	NEWSe_compare.py	/^                        data1 = nc1.variables["DZ_CRESSMAN"][:]$/;"	v
+data_temp	NEWSe_compare.py	/^data_temp = N.empty([len(threshs),len(neighs),len(windows)])$/;"	v
+datetime	NEWSe_compare.py	/^import datetime$/;"	i
+ensdir	NEWSe_compare.py	/^ensdir = '\/work1\/wof\/realtime\/FCST'$/;"	v
+ensnames	NEWSe_compare.py	/^ensnames = sorted(os.listdir('\/work1\/wof\/realtime\/FCST\/20180601\/2130\/'))$/;"	v
+fcstmins	NEWSe_compare.py	/^fcstmins = (30,90,150)$/;"	v
+fissdir	NEWSe_compare.py	/^fissdir = '\/work\/john.lawson\/fracign\/NEWSe_compare'$/;"	v
+fname	NEWSe_compare.py	/^            fname = "heatmap_{:03d}min_{}twindow_{}_{}.png".format($/;"	v
+fname0	NEWSe_compare.py	/^                        fname0 = get_wrfout_fname(validtime)$/;"	v
+fname1	NEWSe_compare.py	/^                        fname1 = get_mrms_fname(validtime)$/;"	v
+fpath0	NEWSe_compare.py	/^                        fpath0 = os.path.join(memdir,fname0)$/;"	v
+fpath1	NEWSe_compare.py	/^                        fpath1 = os.path.join(mrmsdir,casestr,fname1)$/;"	v
+fracdump	NEWSe_compare.py	/^                fracdump = os.path.join(fissdir,out_fname)$/;"	v
+fracign	NEWSe_compare.py	/^                fracign = FI(xa=xa,xfs=xfs,thresholds=threshs,$/;"	v
+fracpick	NEWSe_compare.py	/^                fracpick = os.path.join(fissdir,out_fname)$/;"	v
+get_mrms_fname	NEWSe_compare.py	/^def get_mrms_fname(t):$/;"	f
+get_out_fname	NEWSe_compare.py	/^def get_out_fname(casestr,initstr,fcstmin):$/;"	f
+get_wrfout_fname	NEWSe_compare.py	/^def get_wrfout_fname(t):$/;"	f
+glob	NEWSe_compare.py	/^import glob$/;"	i
+hrdelta	NEWSe_compare.py	/^                hrdelta = inittime if inittime > 12 else (inittime + 24)$/;"	v
+initstr	NEWSe_compare.py	/^                initstr = "{:02d}00".format(inittime)$/;"	v
+inittimes	NEWSe_compare.py	/^inittimes = (20,23,2)$/;"	v
+initutc	NEWSe_compare.py	/^                initutc = caseutc + datetime.timedelta(seconds=60*60*hrdelta)$/;"	v
+intersect_cases	NEWSe_compare.py	/^intersect_cases = []$/;"	v
+intersect_cases_raw	NEWSe_compare.py	/^intersect_cases_raw = sorted(list(set(mrmscases) & set(newscases)))$/;"	v
+itertools	NEWSe_compare.py	/^import itertools$/;"	i
+lats0	NEWSe_compare.py	/^                        lats0 = nc0.variables["XLAT"][0,...]$/;"	v
+lats1	NEWSe_compare.py	/^                        lats1 = nc1.variables["XLAT"][:]$/;"	v
+lons0	NEWSe_compare.py	/^                        lons0 = nc0.variables["XLONG"][0,...]$/;"	v
+lons1	NEWSe_compare.py	/^                        lons1 = nc1.variables["XLON"][:]$/;"	v
+matrix	NEWSe_compare.py	/^        matrix = N.copy(data_temp)$/;"	v
+memdir	NEWSe_compare.py	/^                    memdir = os.path.join(casedir,initstr,mem)$/;"	v
+mrmscasedirs	NEWSe_compare.py	/^mrmscasedirs = {2017:glob.glob(os.path.join(mrmsdirs[2017],"2017*")),$/;"	v
+mrmscases	NEWSe_compare.py	/^mrmscases = os.listdir(mrmsdirs[2017]) + os.listdir(mrmsdirs[2018])$/;"	v
+mrmsdir	NEWSe_compare.py	/^                        mrmsdir = mrmsdirs[int(caseutc.year)]$/;"	v
+mrmsdirs	NEWSe_compare.py	/^mrmsdirs = {2017:'\/work1\/skinnerp\/MRMS_verif\/mrms_cressman',$/;"	v
+nc0	NEWSe_compare.py	/^                        nc0 = Dataset(fpath0)$/;"	v
+nc1	NEWSe_compare.py	/^                        nc1 = Dataset(fpath1)$/;"	v
+ncpus	NEWSe_compare.py	/^ncpus = 30$/;"	v
+neighborhoods	NEWSe_compare.py	/^                                neighborhoods=neighs,$/;"	v
+neighs	NEWSe_compare.py	/^neighs = [1,3,5,7,9]$/;"	v
+newscasedirs	NEWSe_compare.py	/^newscasedirs = {2017:glob.glob(os.path.join(ensdir,"2017*")),$/;"	v
+newscases	NEWSe_compare.py	/^newscases = os.listdir(ensdir)# newscasedirs[2017]) + os.listdir(newscasedirs[2018])$/;"	v
+nidxs	NEWSe_compare.py	/^        nidxs = range(len(neighs))$/;"	v
+nlat0	NEWSe_compare.py	/^                        nlat0 = data0.shape[-2]$/;"	v
+nlat1	NEWSe_compare.py	/^                        nlat1 = data1.shape[-2]$/;"	v
+nlon0	NEWSe_compare.py	/^                        nlon0 = data0.shape[-1]$/;"	v
+nlon1	NEWSe_compare.py	/^                        nlon1 = data1.shape[-1]$/;"	v
+os	NEWSe_compare.py	/^import os$/;"	i
+out_fname	NEWSe_compare.py	/^                out_fname = get_out_fname(casestr,initstr,fcstmin)$/;"	v
+outdir	NEWSe_compare.py	/^outdir = '\/home\/john.lawson\/fracign\/pyoutput'$/;"	v
+pdb	NEWSe_compare.py	/^import pdb$/;"	i
+pickle	NEWSe_compare.py	/^import pickle$/;"	i
+plot	NEWSe_compare.py	/^plot = True$/;"	v
+plotstr	NEWSe_compare.py	/^    plotstr = "bruteyears"$/;"	v
+present	NEWSe_compare.py	/^    present = []$/;"	v
+scores	NEWSe_compare.py	/^scores = ("FISS","FI","UNC","REL","RES")$/;"	v
+temporal_windows	NEWSe_compare.py	/^                                temporal_windows=windows,$/;"	v
+thidxs	NEWSe_compare.py	/^        thidxs = range(len(threshs))$/;"	v
+threshs	NEWSe_compare.py	/^threshs = [10,30,50]$/;"	v
+tidxs	NEWSe_compare.py	/^tidxs = [2,]$/;"	v
+val	NEWSe_compare.py	/^            val = N.mean(DATA[1][fcstmin][th][n][w][score])-N.mean($/;"	v
+validmin	NEWSe_compare.py	/^                        validmin = fcstmin + (diff*5)$/;"	v
+validtime	NEWSe_compare.py	/^                        validtime = initutc + datetime.timedelta(seconds=60*fcstmin)$/;"	v
+vrbl	NEWSe_compare.py	/^vrbl = "REFL_comp"$/;"	v
+widxs	NEWSe_compare.py	/^        widxs = range(len(windows))$/;"	v
+windows	NEWSe_compare.py	/^windows = [1,3,5]$/;"	v
+xa	NEWSe_compare.py	/^                            xa = N.empty((5,nlat1,nlon1))$/;"	v
+xa	NEWSe_compare.py	/^                xa = None$/;"	v
+xfs	NEWSe_compare.py	/^                            xfs = N.empty((18,5,nlat0,nlon0))$/;"	v
+xfs	NEWSe_compare.py	/^                xfs = None$/;"	v
